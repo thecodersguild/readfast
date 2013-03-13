@@ -16,19 +16,31 @@
   <body>
     <div class="container-fluid">
       <div class="row-fluid">
-        <textarea class="span4" rows="10"></textarea>
-        <button class="btn span2">
+        <textarea id="textarea1" class="span4" rows="10" style="width: 100%; height: 10em;"></textarea>
+        <div class="progress progress-info">
+          <div class="bar" id="progress" style="width: 0%"></div>
+        </div>
+        <button class="btn span2" id="play">
           Leer!
         </button>
-        <div class="span5" style="margin-top: 2em;">
-          <input style="width: 400px" type="text" id="slider" value="" data-slider-min="10" data-slider-max="1000" data-slider-step="10" data-slider-value="500" data-slider-orientation="horizontal" data-slider-selection="after" data-slider-tooltip="show">
+        <div class="span5" style="margin-top: .5em;">
+          <input style="width: 50em" type="text" id="slider" value="" data-slider-min="50" data-slider-max="1000" data-slider-step="5" data-slider-value="500" data-slider-orientation="horizontal" data-slider-selection="after" data-slider-tooltip="show">
         </div>
       </div>
       <div id="visor" class="row-fluid">
-        <kbd class="span2"></kbd>
-        <output class="span6" style="font-size: 5em; text-align: center; display: block;"></output>
+     <!--   <div style=" padding-top: 0em; position: absolute;">Time:  </div>
+        <kbd id="time" class="span2" style="padding-left: 1em;">0s</kbd> -->
+        <div style=" padding-top: 1em; position: absolute;">To go:  </div>
+        <kbd id="rest" class="span2" style="padding-top: 1em;padding-left: 1em; position: absolute;">0s</kbd>
       </div>
+      <button class="btn span2" id="pause" style="position: absolute; margin-left: 20%;">
+        Pausa
+      </button>
+      <button class="btn span2" id="rewind" style="position: absolute; margin-left: 50%;">
+        Rewind
+      </button>
     </div>
+        <output class="span6" style="font-size: 5em; text-align: center; display: block; padding-top: 3.5em; padding-left: 24%;"></output>
 
   </body>
 </html>
